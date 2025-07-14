@@ -35,12 +35,12 @@ jobs:
 
           - os: windows-11-arm
             name: windows-arm64ec
-            cmake_args: -G"Visual Studio 17 2022" -A arm64ec -DCMAKE_SYSTEM_VERSION=10 -DOBXF_EXTRA_ZIP_NAME="-arm64ec"
+            cmake_args: -G"Visual Studio 17 2022" -A arm64ec -B cmake-build-arm64 -DCMAKE_SYSTEM_VERSION=10 -DOBXF_EXTRA_ZIP_NAME="-arm64ec" -DCMAKE_SYSTEM_PROCESSOR=ARM64 -DCMAKE_SYSTEM_NAME=Windows
             upload_asset: true
 
           - os: windows-11-arm
             name: windows-arm64
-            cmake_args: -G"Visual Studio 17 2022" -A arm64 -DCMAKE_SYSTEM_VERSION=10 -DOBXF_EXTRA_ZIP_NAME="-arm64"
+            cmake_args: -G"Visual Studio 17 2022" -A arm64 -B cmake-build-arm64 -DCMAKE_SYSTEM_VERSION=10 -DOBXF_EXTRA_ZIP_NAME="-arm64" -DCMAKE_SYSTEM_PROCESSOR=ARM64 -DCMAKE_SYSTEM_NAME=Windows
             upload_asset: true
 
           - os: macos-latest
